@@ -1,0 +1,16 @@
+{
+  "ids": {
+    "Island": 8
+  },
+  "models": {
+    "Island": {
+      "1": "{\"id\":1,\"name\":\"Kaua'i\",\"population\":65689,\"country\":\"USA\"}",
+      "2": "{\"id\":2,\"name\":\"Kaua'i\",\"population\":65689,\"country\":\"USA\"}",
+      "3": "{\"id\":3,\"name\":\"Oahu\",\"population\":976372,\"country\":\"USA\"}",
+      "4": "{\"id\":4,\"name\":\"Hawai'i\",\"population\":185079,\"country\":\"USA\"}",
+      "5": "{\"id\":5,\"name\":\"Maui\",\"population\":144444,\"country\":\"USA\"}",
+      "6": "{\"id\":6,\"name\":\"Te Waipounamu (South Island)\",\"population\":1115800,\"country\":\"NZ\"}",
+      "7": "{\"id\":7,\"name\":\"Te Ika-a-Māui (North Island)\",\"population\":3677200,\"country\":\"NZ\"}"
+    }
+  }
+}

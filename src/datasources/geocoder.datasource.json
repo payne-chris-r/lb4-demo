@@ -1,0 +1,6 @@
+{
+  "name": "geocoder",
+  "connector": "rest",
+  "baseURL": "",
+  "crud": false
+}

@@ -1,10 +1,10 @@
-import {ApplicationConfig} from '@loopback/core';
-import {RestApplication} from '@loopback/rest';
-import {MySequence} from './sequence';
+import { ApplicationConfig } from '@loopback/core';
+import { RestApplication } from '@loopback/rest';
+import { MySequence } from './sequence';
 
 /* tslint:disable:no-unused-variable */
 // Binding and Booter imports are required to infer types for BootMixin!
-import {BootMixin, Booter, Binding} from '@loopback/boot';
+import { BootMixin, Booter, Binding } from '@loopback/boot';
 
 // juggler imports are required to infer types for RepositoryMixin!
 import {
@@ -35,4 +35,12 @@ export class LoopbackTestApplication extends BootMixin(
       },
     };
   }
+  // async start() {
+  //   await super.start();
+
+  //   const server = await this.getServer(RestServer);
+  //   const port = await server.get<number>('rest.port');
+  //   console.log(`Server is running at http://127.0.0.1:${port}`);
+  //   console.log(`Try http://127.0.0.1:${port}/ping`);
+  // }
 }
