@@ -4,7 +4,7 @@
 import { repository } from '@loopback/repository';
 import { IslandRepository } from '../repositories';
 import { Island } from '../models';
-import { post, get, requestBody, HttpErrors } from '@loopback/rest';
+import { post, get, del, requestBody, HttpErrors, param } from '@loopback/rest';
 
 export class IslandController {
   constructor(@repository(IslandRepository) protected islandRepo: IslandRepository) { }
@@ -20,6 +20,11 @@ export class IslandController {
   @get('/islands')
   async findIslands(): Promise<Island[]> {
     return await this.islandRepo.find();
+  }
+
+  @del('/islands/{id}')
+  async deleteIsland(@param.path.number('id') id: number): Promise<boolean> {
+    return await this.islandRepo.deleteById(id);
   }
   // @get('/todos')
   // async findTodos(): Promise<Todo[]> {

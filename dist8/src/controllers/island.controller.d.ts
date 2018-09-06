@@ -5,4 +5,5 @@ export declare class IslandController {
     constructor(islandRepo: IslandRepository);
     createIsland(island: Island): Promise<Island>;
     findIslands(): Promise<Island[]>;
+    deleteIsland(id: number): Promise<boolean>;
 }

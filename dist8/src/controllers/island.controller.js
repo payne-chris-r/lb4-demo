@@ -31,6 +31,9 @@ let IslandController = class IslandController {
     async findIslands() {
         return await this.islandRepo.find();
     }
+    async deleteIsland(id) {
+        return await this.islandRepo.deleteById(id);
+    }
 };
 __decorate([
     rest_1.post('/islands'),
@@ -45,6 +48,13 @@ __decorate([
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)
 ], IslandController.prototype, "findIslands", null);
+__decorate([
+    rest_1.del('/islands/{id}'),
+    __param(0, rest_1.param.path.number('id')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Number]),
+    __metadata("design:returntype", Promise)
+], IslandController.prototype, "deleteIsland", null);
 IslandController = __decorate([
     __param(0, repository_1.repository(repositories_1.IslandRepository)),
     __metadata("design:paramtypes", [repositories_1.IslandRepository])
