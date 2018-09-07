@@ -14,6 +14,7 @@ export class Island extends Entity {
   })
   name?: string;
 
+
   @property({
     type: 'number',
   })
@@ -23,6 +24,16 @@ export class Island extends Entity {
     type: 'string',
   })
   country?: string;
+
+  @property({
+    type: 'string',
+  })
+  remindAtAddress?: string; // address,city,zipcode
+
+  @property({
+    type: 'string',
+  })
+  remindAtGeo?: string; // latitude,longitude
 
   constructor(data?: Partial<Island>) {
     super(data);

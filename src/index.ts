@@ -1,7 +1,7 @@
-import {LoopbackTestApplication} from './application';
-import {ApplicationConfig} from '@loopback/core';
+import { LoopbackTestApplication } from './application';
+import { ApplicationConfig } from '@loopback/core';
 
-export {LoopbackTestApplication};
+export { LoopbackTestApplication };
 
 export async function main(options?: ApplicationConfig) {
   const app = new LoopbackTestApplication(options);

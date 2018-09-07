@@ -1,0 +1,6 @@
+{
+  "name": "othercoder",
+  "connector": "rest",
+  "baseURL": "",
+  "crud": false
+}

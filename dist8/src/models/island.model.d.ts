@@ -4,5 +4,7 @@ export declare class Island extends Entity {
     name?: string;
     population?: number;
     country?: string;
+    remindAtAddress?: string;
+    remindAtGeo?: string;
     constructor(data?: Partial<Island>);
 }

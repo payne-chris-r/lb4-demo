@@ -18,13 +18,21 @@ const repository_1 = require("@loopback/repository");
 const repositories_1 = require("../repositories");
 const models_1 = require("../models");
 const rest_1 = require("@loopback/rest");
+const core_1 = require("../../node_modules/@loopback/core");
 let IslandController = class IslandController {
-    constructor(islandRepo) {
+    constructor(islandRepo, geoService) {
         this.islandRepo = islandRepo;
+        this.geoService = geoService;
     }
     async createIsland(island) {
-        if (!island.population) {
-            throw new rest_1.HttpErrors.BadRequest('title is required, you need to change this');
+        if (!island.name) {
+            throw new rest_1.HttpErrors.BadRequest('title is required');
+        }
+        if (island.remindAtAddress) {
+            // TODO handle "address not found"
+            const geo = await this.geoService.geocode(island.remindAtAddress);
+            // Encode the coordinates as "lat,lng"
+            island.remindAtGeo = `${geo[0].y},${geo[0].x}`;
         }
         return await this.islandRepo.create(island);
     }
@@ -57,7 +65,8 @@ __decorate([
 ], IslandController.prototype, "deleteIsland", null);
 IslandController = __decorate([
     __param(0, repository_1.repository(repositories_1.IslandRepository)),
-    __metadata("design:paramtypes", [repositories_1.IslandRepository])
+    __param(1, core_1.inject('services.GeocoderService')),
+    __metadata("design:paramtypes", [repositories_1.IslandRepository, Object])
 ], IslandController);
 exports.IslandController = IslandController;
 //# sourceMappingURL=island.controller.js.map

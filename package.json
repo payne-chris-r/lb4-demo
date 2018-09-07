@@ -54,6 +54,7 @@
     "@loopback/openapi-v3": "^0.12.5",
     "@loopback/repository": "^0.15.1",
     "@loopback/rest": "^0.19.5",
+    "@loopback/service-proxy": "^0.7.1",
     "loopback-connector-rest": "^2.1.0"
   },
   "devDependencies": {

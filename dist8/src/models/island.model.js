@@ -41,6 +41,18 @@ __decorate([
     }),
     __metadata("design:type", String)
 ], Island.prototype, "country", void 0);
+__decorate([
+    repository_1.property({
+        type: 'string',
+    }),
+    __metadata("design:type", String)
+], Island.prototype, "remindAtAddress", void 0);
+__decorate([
+    repository_1.property({
+        type: 'string',
+    }),
+    __metadata("design:type", String)
+], Island.prototype, "remindAtGeo", void 0);
 Island = __decorate([
     repository_1.model(),
     __metadata("design:paramtypes", [Object])
